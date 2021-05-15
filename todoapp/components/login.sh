@@ -30,7 +30,8 @@ Stat $?
 
 Head "configure environmental variables"
 export AUTH_API_PORT=8080
-export USERS_API_ADDRESS=http://user.$DOMAIN:8080
+export USERS_API_ADDRESS=http://users.$DOMAIN:8080
 
 Head "Start service"
 ./login
+Stat $?
