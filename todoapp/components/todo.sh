@@ -7,7 +7,7 @@ DOMAIN=zsdevops.online
 
 OS_PREREQ
 
-Haed "Installing npm"
+Head "Installing npm"
 apt install npm -y &>>$LOG
 Stat $?
 
@@ -15,7 +15,7 @@ CREATE_DIRECTORY
 
 DOWNLOAD_COMPONENT
 
-Haed "Npm install"
+Head "Npm install"
 npm install -y &>>$LOG
 Stat $?
 
