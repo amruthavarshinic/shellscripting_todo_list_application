@@ -17,13 +17,20 @@ Stat() {
 
 OS_PREREQ() {
   set-hostname ${COMPONENT}
-  Head "Updating APT Repos"
+  Head "Updating apt Repos"
   apt update &>>$LOG
   Stat $?
 }
 
 ERROR() {
   echo -e "\e[1;31m$1\e[0m"
+}
+
+CREATE_DIRECTORY() {
+  Head "Creating Directory"
+  useradd -m -s /bin/bash todoapp
+  cd /home/todoapp/
+  Stat $?
 }
 
 DOWNLOAD_COMPONENT() {
