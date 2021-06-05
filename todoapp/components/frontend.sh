@@ -26,7 +26,7 @@ rm -rf /var/www/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available
 Stat $?
 
 Head "configure environmental variables"
-mv roboshop.conf /etc/nginx/sites-enabled/roboshop.conf
+mv roboshop.conf /etc/nginx/sites-enabled/todo.conf
 for comp in todos login ; do
 # sed -i -e "/$comp/ s/localhost/${comp}.zsdevops01.online/" /etc/nginx/sites-enabled/roboshop.conf
 sed -i -e "/$comp/ s/zsdevops.online/${comp}.zsdevops.online/" /etc/nginx/sites-enabled/todo.conf
