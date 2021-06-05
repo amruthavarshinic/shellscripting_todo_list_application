@@ -32,6 +32,7 @@ for comp in todos login ; do
 sed -i -e "/$comp/ s/zsdevops.online/${comp}.zsdevops.online/" /etc/nginx/sites-enabled/todo.conf
 # export AUTH_API_ADDRESS=http://login.$DOMAIN:8080
 # export TODOS_API_ADDRESS=http://todo.$DOMAIN:8080
+done
 Stat $?
 
 Head "start NGINX and npm Services"
