@@ -35,5 +35,5 @@ sed -i -e "/$comp/ s/zsdevops.online/${comp}.zsdevops.online/" /etc/nginx/sites-
 Stat $?
 
 Head "start NGINX and npm Services"
-systemctl restart nginx && npm start
-Stat $?
+systemctl restart nginx 
+npm start
