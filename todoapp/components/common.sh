@@ -35,7 +35,7 @@ CREATE_DIRECTORY() {
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  git clone "https://github.com/zelar-soft-todoapp/${COMPONENT}"
+  git clone "https://github.com/zs-amrutha/${COMPONENT}"
   cd ${COMPONENT} &>>$LOG 
   Stat $?
 }
