@@ -2,8 +2,8 @@
 
 source components/common.sh
 
-#Used export instead of service file
-DOMAIN=zsdevops.online
+# #Used export instead of service file
+# DOMAIN=zsdevops.online
 
 OS_PREREQ
 
@@ -22,7 +22,7 @@ Stat $?
 Head "configure environmental variables"
 # export REDIS_PORT=6379
 # export REDIS_HOST=redis.$DOMAIN
-sed -i -e "s/REDISPORT/6379/g" -e "s/REDIS_ENDPOINT/redis.$DOMAIN/g" /home/todoapp/todo/systemd.service
+sed -i -e "s/REDISPORT/6379/g" -e "s/REDIS_ENDPOINT/redis.zsdevops.online/g" /home/todoapp/todo/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"

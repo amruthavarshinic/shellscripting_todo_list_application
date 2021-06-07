@@ -2,8 +2,8 @@
 
 source components/common.sh
 
-#Used export instead of service file
-DOMAIN=zsdevops.online
+# #Used export instead of service file
+# DOMAIN=zsdevops.online
 
 OS_PREREQ
 
@@ -24,7 +24,7 @@ mv target/users-api-0.0.1.jar users.jar &>>$LOG
 Stat $?
 
 Head "Update Service File"
-sed -i -e "s/REDIS_ENDPOINT/redis.$DOMAIN/" /home/todoapp/users/systemd.service
+sed -i -e "s/REDIS_ENDPOINT/redis.zsdevops.online/" /home/todoapp/users/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
