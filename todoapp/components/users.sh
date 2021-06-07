@@ -17,7 +17,7 @@ Stat $?
 
 Head "Installing Maven packages"
 mvn clean package &>>$LOG
-mv target/users-1.0.jar users.jar &>>$LOG
+mv target/users-api-0.0.1.jar users.jar &>>$LOG
 Stat $?
 
 Head "Update Service File"
