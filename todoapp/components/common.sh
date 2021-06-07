@@ -35,7 +35,6 @@ CREATE_DIRECTORY() {
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  rm -rf /home/todoapp/${COMPONENT}
   git clone "https://github.com/zs-amrutha/${COMPONENT}"
   cd ${COMPONENT} &>>$LOG 
   Stat $?
