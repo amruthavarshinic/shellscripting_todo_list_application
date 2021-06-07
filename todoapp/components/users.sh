@@ -21,7 +21,7 @@ mv target/users-api-0.0.1.jar users.jar &>>$LOG
 Stat $?
 
 Head "Update Service File"
-sed -i -e "s/REDIS_ENDPOINT/redis.$DOMAIN/" /home/todoapp/users/users.service
+sed -i -e "s/REDIS_ENDPOINT/redis.$DOMAIN/" /home/todoapp/users/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
