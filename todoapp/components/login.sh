@@ -31,7 +31,8 @@ Stat $?
 Head "configure environmental variables"
 # export AUTH_API_PORT=8080
 # export USERS_API_ADDRESS=http://users.$DOMAIN:8080
-sed -i -e 's/USERSENDPOINT/users.$DOMAIN/g' -e 's/LOGIPORT/8080/g' /home/todoapp/frontend/config/index.js
+sed -i -e 's/USERSENDPOINT/users.$DOMAIN/g' -e 's/LOGIPORT/8080/g' /root/go/src/login/login
+Stat $?
 
 Head "Start service"
 ./login
