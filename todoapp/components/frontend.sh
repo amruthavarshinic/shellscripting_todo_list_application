@@ -18,7 +18,8 @@ DOWNLOAD_COMPONENT
 
 
 Head "Installing npm"
-npm install -g npm@latest &>>$LOG && npm run build &>>$LOG
+npm install -g npm@latest &>>$LOG && npm run build  &>>$LOG
+npm rebuild node-sass &>>$LOG
 Stat $?
 
 Head "Remove Default Configuration"
