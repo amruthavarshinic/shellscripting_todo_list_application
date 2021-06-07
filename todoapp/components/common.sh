@@ -27,7 +27,7 @@ ERROR() {
 }
 
 CREATE_DIRECTORY() {
-  Head "Creating Directory" 
+  Head "Creating Directory"
   useradd -m -s /bin/bash todoapp
   cd /home/todoapp/
   Stat $?
