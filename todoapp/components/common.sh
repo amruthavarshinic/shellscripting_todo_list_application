@@ -28,14 +28,16 @@ ERROR() {
 
 CREATE_DIRECTORY() {
   Head "Creating Directory"
-  rm -rf /home/todoapp && useradd -m -s /bin/bash todoapp
+  rm -rf /home/todoapp 
+  useradd -m -s /bin/bash todoapp
   cd /home/todoapp/
   Stat $?
 }
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  rm -rf /home/todoapp/${COMPONENT} && git clone "https://github.com/zs-amrutha/${COMPONENT}"
+  rm -rf /home/todoapp/${COMPONENT}
+  git clone "https://github.com/zs-amrutha/${COMPONENT}"
   cd ${COMPONENT} &>>$LOG 
   Stat $?
 }
