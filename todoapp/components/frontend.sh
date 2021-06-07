@@ -22,8 +22,7 @@ npm rebuild node-sass &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
-sed -i -e '32 s/127.0.0.1/login.$DOMAIN/g' /home/todoapp/frontend/config/index.js
-sed -i -e '36 s/127.0.0.1/todo.$DOMAIN/g' /home/todoapp/frontend/config/index.js
+sed -i -e '32 s/127.0.0.1/login.$DOMAIN/g' -e '36 s/127.0.0.1/todo.$DOMAIN/g' /home/todoapp/frontend/config/index.js
 # export AUTH_API_ADDRESS=http://login.$DOMAIN:8080
 # export TODOS_API_ADDRESS=http://todo.$DOMAIN:8080
 Stat $?
