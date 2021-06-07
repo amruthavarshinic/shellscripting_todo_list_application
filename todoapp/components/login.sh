@@ -35,6 +35,10 @@ Head "configure environmental variables"
 sed -i -e 's/LOGINPORT/8080/g' -e 's/USERSENDPOINT/users.$DOMAIN/g' /root/go/src/login/systemd.service
 Stat $?
 
+Head "Setup SystemD Service"
+mv /root/go/src/login/systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start cart && systemctl enable cart &>>$LOG
+Stat $?
+
 Head "Start service"
 ./login
 Stat $?
