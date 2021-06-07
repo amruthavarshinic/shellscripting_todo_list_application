@@ -32,7 +32,7 @@ Stat $?
 Head "configure environmental variables"
 # export AUTH_API_PORT=8080
 # export USERS_API_ADDRESS=http://users.$DOMAIN:8080
-sed -i -e "s/LOGINPORT/8080/g" -e "s/USERSENDPOINT/users.$DOMAIN/g" /root/go/src/login/systemd.service
+sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users.$DOMAIN/g" /root/go/src/login/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
