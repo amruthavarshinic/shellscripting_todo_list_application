@@ -36,9 +36,5 @@ sed -i -e 's/LOGINPORT/8080/g' -e 's/USERSENDPOINT/users.$DOMAIN/g' /root/go/src
 Stat $?
 
 Head "Setup SystemD Service"
-mv /root/go/src/login/systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start cart && systemctl enable cart &>>$LOG
-Stat $?
-
-Head "Start service"
-./login
+mv /root/go/src/login/systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start login && systemctl enable login &>>$LOG
 Stat $?
