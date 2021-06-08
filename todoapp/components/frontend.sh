@@ -38,5 +38,6 @@ Stat $?
 
 Head "start NGINX and npm Services"
 fuser -k 80/tcp
+nginx -t
 systemctl restart nginx 
 # npm start
