@@ -16,6 +16,7 @@ CREATE_DIRECTORY
 
 Head "Remove Default Configuration"
 rm -rf /var/www/html /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+service nginx restart
 Stat $?
 
 cd /var/www/html
