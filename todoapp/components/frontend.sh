@@ -37,5 +37,6 @@ sed -i -e '32 s/127.0.0.1/login.zsdevops.online/g' -e '36 s/127.0.0.1/todo.zsdev
 Stat $?
 
 Head "start NGINX and npm Services"
+fuser -k 80/tcp
 systemctl restart nginx 
 # npm start
