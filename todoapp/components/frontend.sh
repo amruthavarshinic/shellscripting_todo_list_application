@@ -23,8 +23,8 @@ DOWNLOAD_COMPONENT
 
 Head "Installing npm"
 # npm install &>>$LOG && npm run build  &>>$LOG
-npm install -g npm@latest & &>>$LOG && npm audit fix &>>$LOG && npm run build  &>>$LOG
-npm rebuild node-sass &>>$LOG
+npm install -g npm@latest & &>>$LOG && npm audit fix  & &>>$LOG && npm run build & &>>$LOG
+npm rebuild node-sass & &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
