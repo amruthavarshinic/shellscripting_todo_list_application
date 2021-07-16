@@ -3,7 +3,7 @@
 source components/common.sh
 
 # #Used export instead of service file
-# DOMAIN=zsdevops.online
+DOMAIN=zsdevops.online
 
 OS_PREREQ
 
@@ -30,9 +30,7 @@ apt install go-dep &>>$LOG && go get &>>$LOG && go build &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
-# export AUTH_API_PORT=8080
-# export USERS_API_ADDRESS=http://users.$DOMAIN:8080
-sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users.zsdevops.online/g" /root/go/src/login/systemd.service
+sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users-dev.$DOMAIN/g" /root/go/src/login/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
