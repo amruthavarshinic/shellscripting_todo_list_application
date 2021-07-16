@@ -17,7 +17,7 @@ CREATE_DIRECTORY
 DOWNLOAD_COMPONENT
 
 Head "Installing npm"
-npm install -g npm@latest &>>$LOG && npm run build &>>$LOG
+npm install -g npm@latest &>>$LOG && npm install shelljs &>>$LOG && npm run build &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
