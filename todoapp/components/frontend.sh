@@ -17,9 +17,9 @@ CREATE_DIRECTORY
 DOWNLOAD_COMPONENT
 
 Head "Installing npm"
-# npm install &>>$LOG && npm run build  &>>$LOG
-npm install shelljs &>>$LOG
-npm install -g npm@latest  &>>$LOG && npm rebuild node-sass &>>$LOG && npm install shelljs &>>$LOG && npm run build  &>>$LOG
+npm install -g npm@latest &>>$LOG && npm run build  &>>$LOG
+# npm install shelljs &>>$LOG
+# npm install -g npm@latest  &>>$LOG && npm rebuild node-sass &>>$LOG && npm install shelljs &>>$LOG && npm run build  &>>$LOG
 
 Stat $?
 
