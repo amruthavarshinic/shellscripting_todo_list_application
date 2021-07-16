@@ -17,7 +17,8 @@ CREATE_DIRECTORY
 DOWNLOAD_COMPONENT
 
 Head "Installing npm"
-npm install -g npm@latest & &>>$LOG && npm run build & &>>$LOG
+npm cache clean --force & &>>$LOG
+npm install & &>>$LOG && npm run build & &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
