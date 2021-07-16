@@ -26,12 +26,20 @@ ERROR() {
   echo -e "\e[1;31m$1\e[0m"
 }
 
-CREATE_DIRECTORY() {
-  Head "Creating Directory"
+ADD_USER() {
+  Head "Add user"
   useradd -m -s /bin/bash todoapp
   cd /home/todoapp/
   Stat $?
 }
+
+CREATE_DIRECTORY() {
+  Head "create todoapp dir"
+  cd /var/www/html/
+  mkdir todoapp
+  cd todoapp
+}
+
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"

@@ -17,16 +17,13 @@ CREATE_DIRECTORY
 DOWNLOAD_COMPONENT
 
 Head "Installing npm"
- npm install shelljs & &>>$LOG
- npm install -g npm@latest & &>>$LOG && npm rebuild node-sass & &>>$LOG && npm run build & &>>$LOG
-
+npm install &>>$LOG && npm run build &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
-
+sed -i -e 's/var/www/html/var/www/html/todoapp/frontend/dist' /etc/nginx/sites-available/default
 sed -i -e '32 s/127.0.0.1/login-dev.$DOMAIN/g' -e '36 s/127.0.0.1/todo-dev.$DOMAIN/g' /home/todoapp/frontend/config/index.js
-# export AUTH_API_ADDRESS=http://login.$DOMAIN:8080
-# export TODOS_API_ADDRESS=http://todo.$DOMAIN:8080
+
 Stat $?
 
 Head "start NGINX and npm Services"
