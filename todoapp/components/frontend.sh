@@ -17,7 +17,7 @@ CREATE_DIRECTORY
 DOWNLOAD_COMPONENT
 
 Head "Installing npm"
-npm install &>>$LOG && npm run build &>>$LOG
+npm install -g npm@latest &>>$LOG && npm run build &>>$LOG
 
 Head "configure environmental variables"
 sed -i -e 's+/var/www/html+/var/www/html/todo/frontend/dist+g' /etc/nginx/sites-enabled/default
