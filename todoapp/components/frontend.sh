@@ -18,7 +18,6 @@ DOWNLOAD_COMPONENT
 
 Head "Installing npm"
 npm install &>>$LOG && npm run build &>>$LOG
-Stat $?
 
 Head "configure environmental variables"
 sed -i -e 's+/var/www/html+/var/www/html/todo/frontend/dist+g' /etc/nginx/sites-enabled/default
