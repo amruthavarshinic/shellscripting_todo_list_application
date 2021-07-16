@@ -30,7 +30,7 @@ apt install go-dep &>>$LOG && go get &>>$LOG && go build &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
-sed -i -e 's/login-ci/login/g' /home/todoapp/login/systemd.service
+sed -i -e 's/login-ci/login/g' /root/go/src/login/systemd.service
 sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users-dev.$DOMAIN/g" /root/go/src/login/systemd.service
 Stat $?
 
