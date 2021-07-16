@@ -21,7 +21,7 @@ npm install & &>>$LOG && npm run build & &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
-sed -i -e 's/var/www/html/var/www/html/todoapp/frontend/dist' /etc/nginx/sites-available/default
+sed -i -e 's+/var/www/html+/var/www/html/todo/frontend/dist+g' /etc/nginx/sites-enabled/default
 sed -i -e '32 s/127.0.0.1/login-dev.$DOMAIN/g' -e '36 s/127.0.0.1/todo-dev.$DOMAIN/g' /home/todoapp/frontend/config/index.js
 
 Stat $?
