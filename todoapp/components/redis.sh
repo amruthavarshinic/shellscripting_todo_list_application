@@ -4,7 +4,7 @@ source components/common.sh
 OS_PREREQ
 
 Head "Install Redis"
-apt install redis-server -y &>>$LOG
+apt-get install redis-server -y &>>$LOG
 Stat $?
 
 Head "Update Redis Listen Address"
