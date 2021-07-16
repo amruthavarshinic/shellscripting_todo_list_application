@@ -22,11 +22,12 @@ Stat $?
 
 Head "configure environmental variables"
 sed -i -e 's+/var/www/html+/var/www/html/todo/frontend/dist+g' /etc/nginx/sites-enabled/default
-sed -i -e '32 s/127.0.0.1/login-dev.$DOMAIN/g' -e '36 s/127.0.0.1/todo-dev.$DOMAIN/g' /home/todoapp/frontend/config/index.js
-
+sed -i -e '32 s/127.0.0.1/login-dev.$DOMAIN/g' -e '36 s/127.0.0.1/todo-dev.$DOMAIN/g' /var/www/html/todoapp/frontend/config/index.js
 Stat $?
 
 Head "start NGINX and npm Services"
 
 systemctl restart nginx 
-npm start
+mv /var/www/html/todoapp/frontend/systemd.service /etc/systemd/system/frontend.service && systemctl daemon-reload && systemctl start frontend && systemctl enable frontend &>>$LOG
+# npm start
+Stat $?
