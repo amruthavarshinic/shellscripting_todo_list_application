@@ -19,6 +19,7 @@ DOWNLOAD_COMPONENT
 Head "Installing npm"
 npm install shelljs & &>>$LOG 
 npm install & &>>$LOG && npm run build & &>>$LOG
+npm rebuild node-sass & &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
