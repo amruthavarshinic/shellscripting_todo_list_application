@@ -7,7 +7,7 @@ source components/common.sh
 
 OS_PREREQ
 
-CREATE_DIRECTORY
+ADD_USER
 
 DOWNLOAD_COMPONENT
 
