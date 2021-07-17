@@ -2,9 +2,6 @@
 
 source components/common.sh
 
-#Used export instead of service file
-DOMAIN=zsdevops.online
-
 OS_PREREQ
 
 Head "Installing go"
@@ -29,7 +26,7 @@ Stat $?
 
 Head "configure environmental variables"
 sed -i -e 's/login-ci/login/g' /root/go/src/login/systemd.service
-sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users-dev.$DOMAIN/g" /root/go/src/login/systemd.service
+sed -i -e "s/LOGIN_ENDPOINT/8080/g" -e "s/USERS_ENDPOINT/users.zsdevops.online/g" /root/go/src/login/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
