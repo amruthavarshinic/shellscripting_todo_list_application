@@ -2,7 +2,7 @@
 
 source components/common.sh
 
-# #Used export instead of service file
+#Used export instead of service file
 DOMAIN=zsdevops.online
 
 OS_PREREQ
