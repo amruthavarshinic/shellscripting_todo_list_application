@@ -16,10 +16,11 @@ CREATE_DIRECTORY
 
 DOWNLOAD_COMPONENT
 
-Head "Installing npm"
-npm install shelljs & &>>$LOG 
-npm install -g npm@latest & &>>$LOG && npm run build & &>>$LOG
-npm rebuild node-sass & &>>$LOG
+Head "run and build npm"
+npm install -g npm@latest &>>$LOG
+npm install shelljs &>>$LOG
+npm install --save-dev  --unsafe-perm node-sass &>>$LOG
+npm run build  &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
