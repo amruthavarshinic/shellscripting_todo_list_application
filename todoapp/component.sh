@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source components/common.sh
+
 Head "login to the server"
 ssh 3.230.3.58
 
