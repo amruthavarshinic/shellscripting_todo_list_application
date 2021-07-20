@@ -7,4 +7,4 @@ if [ "${USER_NAME}" != "root" ]; then
   exit 1
 fi
 
-ssh 100.26.227.122 "curl -s -L -o /tmp/frontend.zip "https://github.com/zs-amrutha/todoapp-shellscripting/archive/main.zip" ; unzip /tmp/frontend.zip ; mv frontend-main/* . ; cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
+ssh 100.26.227.122 "curl -s -L -o "https://github.com/zs-amrutha/todoapp-shellscripting/archive/main.zip" ; unzip main.zip ; cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
