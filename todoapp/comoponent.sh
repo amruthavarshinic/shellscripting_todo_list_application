@@ -9,4 +9,4 @@ if [ "${USER_NAME}" != "root" ]; then
   exit 1
 fi
 
-ssh 100.26.227.122 " curl -s -L -o /tmp/todoapp-shellscripting.zip "https://github.com/zs-amrutha/todoapp-shellscripting/archive/main.zip" ; unzip /tmp/todoapp-shellscripting.zip ; mv todoapp-shellscripting-main/* .cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
+ssh 100.26.227.122 " sudo git clone  https://<zs-amrutha>:<Amrutha123$>@github.com/zs-amrutha/todoapp-shellscripting.git ; cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
