@@ -7,4 +7,4 @@ if [ "${USER_NAME}" != "root" ]; then
   exit 1
 fi
 
-ssh 100.26.227.122 " sudo git clone "https://github.com/zs-amrutha/todoapp-shellscripting.git" ; cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
+ssh 100.26.227.122 " sudo git clone https://<username>:<p%40ssword>@github.com/zs-amrutha/todoapp-shellscripting.git ; cd todoapp-shellscripting/todoapp ; sudo bash todoapp.sh redis"
