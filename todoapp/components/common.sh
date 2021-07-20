@@ -43,7 +43,7 @@ CREATE_DIRECTORY() {
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  git clone "https://github.com/zs-amrutha/${COMPONENT}"
+  git clone "https://zs-amrutha:Amrutha123%24@github.com/zs-amrutha/${COMPONENT}"
   cd ${COMPONENT} &>>$LOG 
   Stat $?
 }
