@@ -8,7 +8,7 @@ Head "Installing NGINX and npm"
 apt install npm -y &>>$LOG
 Stat $?
 
-CREATE_DIRECTORY
+ADD_USER
 
 DOWNLOAD_COMPONENT
 

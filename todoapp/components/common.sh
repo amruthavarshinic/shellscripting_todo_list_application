@@ -33,14 +33,6 @@ ADD_USER() {
   Stat $?
 }
 
-CREATE_DIRECTORY() {
-  Head "create todoapp dir"
-  cd /var/www/html/
-  mkdir todoapp
-  cd todoapp
-}
-
-
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
   git clone "https://zs-amrutha:Amrutha123%24@github.com/zs-amrutha/${COMPONENT}"
