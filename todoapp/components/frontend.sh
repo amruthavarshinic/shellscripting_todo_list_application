@@ -4,7 +4,7 @@ source components/common.sh
 
 OS_PREREQ
 
-Head "Installing and npm"
+Head "Installing npm"
 apt install npm -y &>>$LOG
 Stat $?
 
