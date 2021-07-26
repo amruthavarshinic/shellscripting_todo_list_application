@@ -2,9 +2,6 @@
 
 source components/common.sh
 
-# #Used export instead of service file
-DOMAIN=zsdevops.online
-
 OS_PREREQ
 
 Head "Installing npm"
