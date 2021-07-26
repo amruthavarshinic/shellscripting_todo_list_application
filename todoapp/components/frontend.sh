@@ -4,7 +4,7 @@ source components/common.sh
 
 OS_PREREQ
 
-Head "Installing NGINX and npm"
+Head "Installing and npm"
 apt install npm -y &>>$LOG
 Stat $?
 
