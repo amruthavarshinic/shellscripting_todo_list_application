@@ -13,6 +13,7 @@ ADD_USER
 DOWNLOAD_COMPONENT
 
 Head "run and build npm"
+cd /home/todoapp/frontend
 npm install & &>>$LOG && npm run build  &>>$LOG
 Stat $?
 
