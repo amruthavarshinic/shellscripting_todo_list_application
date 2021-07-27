@@ -14,7 +14,7 @@ DOWNLOAD_COMPONENT
 
 Head "run and build npm"
 cd /home/todoapp/frontend
-npm install & &>>$LOG && npm run build  &>>$LOG
+npm install & && npm run build  &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
