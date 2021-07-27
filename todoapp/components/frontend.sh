@@ -13,10 +13,7 @@ ADD_USER
 DOWNLOAD_COMPONENT
 
 Head "run and build npm"
-npm install -g npm@latest &>>$LOG
-npm install shelljs & &>>$LOG
-npm install --save-dev  --unsafe-perm node-sass & &>>$LOG
-npm run build  &>>$LOG
+npm install &>>$LOG && npm run build  &>>$LOG
 Stat $?
 
 Head "configure environmental variables"
@@ -27,3 +24,23 @@ Head "start NGINX and npm Services"
 mv /var/www/html/todoapp/frontend/systemd.service /etc/systemd/system/frontend.service && systemctl daemon-reload && systemctl start frontend && systemctl enable frontend &>>$LOG
 # npm start
 Stat $?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# npm install -g npm@latest
+# npm install shelljs & 
+# npm install --save-dev  --unsafe-perm node-sass &
